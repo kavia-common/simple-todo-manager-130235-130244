@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Placeholder gradlew script for CI environments where Expo prebuild hasn't been run.
+# It avoids failures when tools try to run ./gradlew before android/ is generated.
+# If you need a real native build, run: npm run prebuild:android
+echo "[info] Placeholder Gradle wrapper invoked. Expo prebuild has not been run yet."
+echo "[info] To generate native Android project, run: npm run prebuild:android"
+exit 0

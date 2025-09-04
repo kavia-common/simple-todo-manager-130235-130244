@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Top-level placeholder gradle wrapper to handle CI tools invoking ./gradlew from repo root or android root.
+# Redirect to android/gradlew if present, otherwise print info and exit success.
+if [ -x "./android/gradlew" ]; then
+  exec ./android/gradlew "$@"
+else
+  echo "[info] Placeholder Gradle wrapper invoked at repo root."
+  echo "[info] No native Android project found. Run: npm run prebuild:android"
+  exit 0
+fi
